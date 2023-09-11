@@ -17,6 +17,6 @@ resource "aws_route53_record" "record" {
    records = [ each.key == "web" ? each.value.public_ip : each.value.private_ip ]
 }
 
-#output "aws_instance_info" {
- # value = aws_instance.roboshop  
-#}
+output "aws_instance_info" {
+  value = aws_instance.roboshop  
+}
